@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorfly | Advanced Propulsion Systems</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-white text-slate-800 font-sans antialiased m-0 p-0">
+    <section class="relative w-full min-h-[60vh] md:min-h-[70vh] flex flex-col justify-between bg-cover bg-center bg-no-repeat px-6" style="background-image: linear-gradient(to bottom, rgba(5, 10, 20, 0.4), rgba(5, 10, 20, 0.75)), url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1920&q=80');">
+      <header class="w-full max-w-7xl mx-auto h-20 flex items-center justify-between border-b border-white/10">
+        <a href="#" class="flex items-center group">
+          <img src="Screenshot 2026-05-28 193356.jpg" class="h-9 w-auto object-contain block group-hover:opacity-85 transition">
+        </a>
+        <nav class="flex space-x-6 text-xs font-medium text-slate-300/90 tracking-wide uppercase">
+          <a href="#solutions" class="hover:text-white transition">Solutions</a>
+          <a href="#specs" class="hover:text-white transition">Data Sheets</a>
+          <a href="#contact" class="hover:text-white transition">Contact</a>
+        </nav>
+      </header>
+      <div class="w-full max-w-4xl mx-auto text-center my-auto py-12">
+        <h1 class="text-white text-4xl md:text-6xl font-light tracking-wide mb-3"> Motorfly Technologies </h1>
+        <p class="text-slate-300/80 text-sm md:text-base font-light tracking-widest uppercase"> High-Torque Density Propulsion & Actuation Systems </p>
+      </div>
+      <div class="h-6"></div>
+    </section>
+    <main id="solutions" class="w-full max-w-7xl mx-auto px-6 py-20 bg-white">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+        <div class="flex flex-col items-start text-left">
+          <h2 class="text-xl md:text-2xl font-light text-cyan-800 tracking-tight mb-4"> Robotic Joints & Actuators </h2>
+          <p class="text-sm text-slate-500 leading-relaxed font-light mb-6"> Ultra-low profile frameless pancake configurations engineered explicitly for heavy-payload arm joints and cobots. Designed mathematically to minimize structural deflection and eliminate cogging torque ripples during high-precision manipulation. </p>
+          <a href="#specs" onclick="switchTab('robotics')" class="mt-auto bg-cyan-600 hover:bg-cyan-700 text-white font-medium text-xs uppercase tracking-wider px-5 py-2.5 rounded transition shadow-sm"> More </a>
+        </div>
+        <div class="flex flex-col items-start text-left">
+          <h2 class="text-xl md:text-2xl font-light text-emerald-800 tracking-tight mb-4"> Tactical EV Powertrains </h2>
+          <p class="text-sm text-slate-500 leading-relaxed font-light mb-6"> High-efficiency synchronous reluctance and IPMSM propulsion drives built for tactical utility platforms and unmanned ground vehicles. Optimized for robust liquid-cooling loops and aggressive wide speed ranges. </p>
+          <a href="#specs" onclick="switchTab('ev')" class="mt-auto bg-cyan-600 hover:bg-cyan-700 text-white font-medium text-xs uppercase tracking-wider px-5 py-2.5 rounded transition shadow-sm"> More </a>
+        </div>
+        <div class="flex flex-col items-start text-left">
+          <h2 class="text-xl md:text-2xl font-light text-indigo-800 tracking-tight mb-4"> Aerospace & Drone Units </h2>
+          <p class="text-sm text-slate-500 leading-relaxed font-light mb-6"> Open-body, lightweight outrunner motors engineered for extreme thrust-to-weight demands. Utilizes custom thin silicon-steel stator laminations to radically drive down eddy current constraints during continuous high-RPM tasks. </p>
+          <a href="#specs" onclick="switchTab('drone')" class="mt-auto bg-cyan-600 hover:bg-cyan-700 text-white font-medium text-xs uppercase tracking-wider px-5 py-2.5 rounded transition shadow-sm"> More </a>
+        </div>
+      </div>
+    </main>
+    <section id="specs" class="w-full bg-slate-50 border-t border-slate-100 py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex border-b border-slate-200 mb-8 overflow-x-auto text-xs font-medium tracking-wider">
+          <button onclick="switchTab('robotics')" id="btn-robotics" class="tab-btn py-3 px-4 border-b-2 border-cyan-600 text-cyan-600 focus:outline-none uppercase"> Robotics Matrix </button>
+          <button onclick="switchTab('ev')" id="btn-ev" class="tab-btn py-3 px-4 border-b-2 border-transparent text-slate-400 hover:text-slate-600 focus:outline-none uppercase"> EV Powertrain </button>
+          <button onclick="switchTab('drone')" id="btn-drone" class="tab-btn py-3 px-4 border-b-2 border-transparent text-slate-400 hover:text-slate-600 focus:outline-none uppercase"> Drone Propulsion </button>
+        </div>
+        <div class="bg-white border border-slate-200 rounded shadow-sm overflow-hidden text-sm font-light">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-100/60 border-b border-slate-200 text-xs font-medium text-slate-500 uppercase">
+                <th class="p-4">Technical Parameter Specification</th>
+                <th class="p-4 text-right">Value Metric</th>
+              </tr>
+            </thead>
+            <tbody id="tab-robotics" class="tab-content divide-y divide-slate-100 text-slate-600">
+              <tr>
+                <td class="p-4">Peak Torque Density</td>
+                <td class="p-4 text-right font-mono text-cyan-600">42.4 Nm/kg</td>
+              </tr>
+              <tr>
+                <td class="p-4">Stator Outer Diameter / Width</td>
+                <td class="p-4 text-right font-mono text-cyan-600">110 mm / 21 mm</td>
+              </tr>
+              <tr>
+                <td class="p-4">Rotor Internal Bore Through-Hole</td>
+                <td class="p-4 text-right font-mono text-cyan-600">45 mm ID</td>
+              </tr>
+            </tbody>
+            <tbody id="tab-ev" class="tab-content hidden divide-y divide-slate-100 text-slate-600">
+              <tr>
+                <td class="p-4">Maximum Target Speed</td>
+                <td class="p-4 text-right font-mono text-emerald-600">16,000 RPM</td>
+              </tr>
+              <tr>
+                <td class="p-4">Peak Mechanical Shaft Power</td>
+                <td class="p-4 text-right font-mono text-emerald-600">145 kW</td>
+              </tr>
+              <tr>
+                <td class="p-4">Bus Voltage Nominal Limit</td>
+                <td class="p-4 text-right font-mono text-emerald-600">800 VDC</td>
+              </tr>
+            </tbody>
+            <tbody id="tab-drone" class="tab-content hidden divide-y divide-slate-100 text-slate-600">
+              <tr>
+                <td class="p-4">Slot / Pole Layout Configuration</td>
+                <td class="p-4 text-right font-mono text-indigo-600">24S / 28P</td>
+              </tr>
+              <tr>
+                <td class="p-4">Maximum Continuous Core Thrust</td>
+                <td class="p-4 text-right font-mono text-indigo-600">18.5 kg</td>
+              </tr>
+              <tr>
+                <td class="p-4">Silicon Core Structural Thickness</td>
+                <td class="p-4 text-right font-mono text-indigo-600">0.20 mm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <footer id="contact" class="bg-slate-900 text-slate-400 text-xs py-8 px-6 border-t border-slate-950">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>&copy; 2026 Motorfly Engineering Framework. All rights reserved.</div>
+        <div class="flex space-x-6 text-slate-500">
+          <a href="#" class="hover:text-slate-300 transition">Analytical Models</a>
+          <a href="#" class="hover:text-slate-300 transition">CAD Integration</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function switchTab(platform) {
+        document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+          btn.classList.remove('border-cyan-600', 'text-cyan-600');
+          btn.classList.add('border-transparent', 'text-slate-400');
+        });
+        document.getElementById('tab-' + platform).classList.remove('hidden');
+        const activeBtn = document.getElementById('btn-' + platform);
+        activeBtn.classList.remove('border-transparent', 'text-slate-400');
+        activeBtn.classList.add('border-cyan-600', 'text-cyan-600');
+      }
+    </script>
+  </body>
+</html>
